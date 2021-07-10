@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**getAllLog**](LogApi.md#getAllLog) | **GET** /logs | 
 [**getAllLogFromEnv**](LogApi.md#getAllLogFromEnv) | **GET** /logs/{env} | 
 [**getAllLogFromEnvBatch**](LogApi.md#getAllLogFromEnvBatch) | **GET** /logs/{env}/{batch} | 
+[**getLogFromJobId**](LogApi.md#getLogFromJobId) | **GET** /logs/job/{jobId} | 
 
 <a name="getAllLog"></a>
 # **getAllLog**
@@ -139,6 +140,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageLogBatchDto**](PageLogBatchDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getLogFromJobId"></a>
+# **getLogFromJobId**
+> JobStateDto getLogFromJobId(jobId)
+
+
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.LogApi;
+
+
+LogApi apiInstance = new LogApi();
+String jobId = "jobId_example"; // String | 
+try {
+    JobStateDto result = apiInstance.getLogFromJobId(jobId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LogApi#getLogFromJobId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**|  |
+
+### Return type
+
+[**JobStateDto**](JobStateDto.md)
 
 ### Authorization
 

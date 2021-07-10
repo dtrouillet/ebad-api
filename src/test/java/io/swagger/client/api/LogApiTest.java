@@ -12,6 +12,7 @@
 
 package io.swagger.client.api;
 
+import io.swagger.client.model.JobStateDto;
 import io.swagger.client.model.PageLogBatchDto;
 import io.swagger.client.model.Pageable;
 import io.swagger.client.model.Predicate;
@@ -79,6 +80,21 @@ public class LogApiTest {
         Predicate predicate = null;
         Pageable pageable = null;
         PageLogBatchDto response = api.getAllLogFromEnvBatch(env, batch, predicate, pageable);
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getLogFromJobIdTest() {
+        String jobId = null;
+        JobStateDto response = api.getLogFromJobId(jobId);
 
         // TODO: test validations
     }

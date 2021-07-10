@@ -5,5 +5,5 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Long** |  |  [optional]
 **content** | **String** |  |  [optional]
-**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**createdDate** | [**DateTime**](DateTime.md) |  |  [optional]
 **read** | **Boolean** |  |  [optional]

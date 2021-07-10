@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **createdBy** | **String** |  |  [optional]
-**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**createdDate** | [**DateTime**](DateTime.md) |  |  [optional]
 **lastModifiedBy** | **String** |  |  [optional]
-**lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**lastModifiedDate** | [**DateTime**](DateTime.md) |  |  [optional]
 **id** | **Long** |  |  [optional]
 **login** | **String** |  | 
 **name** | **String** |  | 

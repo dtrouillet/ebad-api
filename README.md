@@ -1,8 +1,8 @@
-# swagger-java-client
+# ebad-java-client
 
 EBAD API
-- API version: 2.7.0
-  - Build date: 2021-07-04T17:11:15.956Z[GMT]
+- API version: 2.8.0
+  - Build date: 2021-07-10T21:09:32.970Z[GMT]
 
 This documentation describe EBAD API.
 
@@ -38,9 +38,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>io.swagger</groupId>
-  <artifactId>swagger-java-client</artifactId>
-  <version>1.0.0</version>
+  <groupId>fr.icdc.ebad</groupId>
+  <artifactId>ebad-java-client</artifactId>
+  <version>2.7.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:swagger-java-client:1.0.0"
+compile "fr.icdc.ebad:ebad-java-client:2.7.0"
 ```
 
 ### Others
@@ -63,7 +63,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/swagger-java-client-1.0.0.jar`
+* `target/ebad-java-client-2.7.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -221,6 +221,9 @@ Class | Method | HTTP request | Description
 *AccreditationRequestApi* | [**createAccreditationRequest**](docs/AccreditationRequestApi.md#createAccreditationRequest) | **PUT** /accreditation-requests | 
 *AccreditationRequestApi* | [**findAll**](docs/AccreditationRequestApi.md#findAll) | **GET** /accreditation-requests/need-answer | 
 *AccreditationRequestApi* | [**findAllMyRequest**](docs/AccreditationRequestApi.md#findAllMyRequest) | **GET** /accreditation-requests | 
+*ApiTokenApi* | [**createToken**](docs/ApiTokenApi.md#createToken) | **PUT** /api-tokens | 
+*ApiTokenApi* | [**deleteToken**](docs/ApiTokenApi.md#deleteToken) | **DELETE** /api-tokens/{id} | 
+*ApiTokenApi* | [**findToken**](docs/ApiTokenApi.md#findToken) | **GET** /api-tokens | 
 *ApplicationApi* | [**createApplication**](docs/ApplicationApi.md#createApplication) | **PUT** /applications/gestion | 
 *ApplicationApi* | [**findApplication**](docs/ApplicationApi.md#findApplication) | **GET** /applications/search | 
 *ApplicationApi* | [**getAll3**](docs/ApplicationApi.md#getAll3) | **GET** /applications | 
@@ -273,6 +276,7 @@ Class | Method | HTTP request | Description
 *LogApi* | [**getAllLog**](docs/LogApi.md#getAllLog) | **GET** /logs | 
 *LogApi* | [**getAllLogFromEnv**](docs/LogApi.md#getAllLogFromEnv) | **GET** /logs/{env} | 
 *LogApi* | [**getAllLogFromEnvBatch**](docs/LogApi.md#getAllLogFromEnvBatch) | **GET** /logs/{env}/{batch} | 
+*LogApi* | [**getLogFromJobId**](docs/LogApi.md#getLogFromJobId) | **GET** /logs/job/{jobId} | 
 *NewApi* | [**delete2**](docs/NewApi.md#delete2) | **DELETE** /news/{id} | 
 *NewApi* | [**getActualityPublished**](docs/NewApi.md#getActualityPublished) | **GET** /news/public | 
 *NewApi* | [**getAll2**](docs/NewApi.md#getAll2) | **GET** /news | 
@@ -311,6 +315,8 @@ Class | Method | HTTP request | Description
 
  - [AccreditationRequestDto](docs/AccreditationRequestDto.md)
  - [ActualiteDto](docs/ActualiteDto.md)
+ - [ApiTokenDto](docs/ApiTokenDto.md)
+ - [ApiTokenWithKeyDto](docs/ApiTokenWithKeyDto.md)
  - [ApplicationDto](docs/ApplicationDto.md)
  - [ApplicationSimpleDto](docs/ApplicationSimpleDto.md)
  - [AuthorityApplicationDTO](docs/AuthorityApplicationDTO.md)
@@ -335,6 +341,7 @@ Class | Method | HTTP request | Description
  - [GlobalSettingKeyValueDto](docs/GlobalSettingKeyValueDto.md)
  - [GlobalSettingValueDto](docs/GlobalSettingValueDto.md)
  - [JobDto](docs/JobDto.md)
+ - [JobStateDto](docs/JobStateDto.md)
  - [LogBatchDto](docs/LogBatchDto.md)
  - [LoginDto](docs/LoginDto.md)
  - [NormLabelIdDto](docs/NormLabelIdDto.md)
@@ -342,6 +349,7 @@ Class | Method | HTTP request | Description
  - [NotificationDto](docs/NotificationDto.md)
  - [PageAccreditationRequestDto](docs/PageAccreditationRequestDto.md)
  - [PageActualiteDto](docs/PageActualiteDto.md)
+ - [PageApiTokenDto](docs/PageApiTokenDto.md)
  - [PageApplicationDto](docs/PageApplicationDto.md)
  - [PageApplicationSimpleDto](docs/PageApplicationSimpleDto.md)
  - [PageBatchDto](docs/PageBatchDto.md)

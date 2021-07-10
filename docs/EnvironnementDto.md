@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **createdBy** | **String** |  | 
-**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**createdDate** | [**DateTime**](DateTime.md) |  | 
 **lastModifiedBy** | **String** |  |  [optional]
-**lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**lastModifiedDate** | [**DateTime**](DateTime.md) |  |  [optional]
 **id** | **Long** |  |  [optional]
 **name** | **String** |  |  [optional]
 **host** | **String** |  |  [optional]
@@ -14,5 +14,5 @@ Name | Type | Description | Notes
 **homePath** | **String** |  |  [optional]
 **prefix** | **String** |  |  [optional]
 **diskSpace** | **Float** |  |  [optional]
-**dateTraitement** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**dateTraitement** | [**DateTime**](DateTime.md) |  |  [optional]
 **norme** | [**NormeDto**](NormeDto.md) |  |  [optional]

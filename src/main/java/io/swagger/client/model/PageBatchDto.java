@@ -27,7 +27,7 @@ import java.util.List;
  * PageBatchDto
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-04T22:32:11.845Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-10T21:22:29.539Z[GMT]")
 public class PageBatchDto {
   @JsonProperty("totalElements")
   private Long totalElements = null;
@@ -44,14 +44,14 @@ public class PageBatchDto {
   @JsonProperty("number")
   private Integer number = null;
 
+  @JsonProperty("sort")
+  private Sort sort = null;
+
   @JsonProperty("first")
   private Boolean first = null;
 
   @JsonProperty("last")
   private Boolean last = null;
-
-  @JsonProperty("sort")
-  private Sort sort = null;
 
   @JsonProperty("numberOfElements")
   private Integer numberOfElements = null;
@@ -160,6 +160,24 @@ public class PageBatchDto {
     this.number = number;
   }
 
+  public PageBatchDto sort(Sort sort) {
+    this.sort = sort;
+    return this;
+  }
+
+   /**
+   * Get sort
+   * @return sort
+  **/
+  @Schema(description = "")
+  public Sort getSort() {
+    return sort;
+  }
+
+  public void setSort(Sort sort) {
+    this.sort = sort;
+  }
+
   public PageBatchDto first(Boolean first) {
     this.first = first;
     return this;
@@ -194,24 +212,6 @@ public class PageBatchDto {
 
   public void setLast(Boolean last) {
     this.last = last;
-  }
-
-  public PageBatchDto sort(Sort sort) {
-    this.sort = sort;
-    return this;
-  }
-
-   /**
-   * Get sort
-   * @return sort
-  **/
-  @Schema(description = "")
-  public Sort getSort() {
-    return sort;
-  }
-
-  public void setSort(Sort sort) {
-    this.sort = sort;
   }
 
   public PageBatchDto numberOfElements(Integer numberOfElements) {
@@ -283,9 +283,9 @@ public class PageBatchDto {
         Objects.equals(this.size, pageBatchDto.size) &&
         Objects.equals(this.content, pageBatchDto.content) &&
         Objects.equals(this.number, pageBatchDto.number) &&
+        Objects.equals(this.sort, pageBatchDto.sort) &&
         Objects.equals(this.first, pageBatchDto.first) &&
         Objects.equals(this.last, pageBatchDto.last) &&
-        Objects.equals(this.sort, pageBatchDto.sort) &&
         Objects.equals(this.numberOfElements, pageBatchDto.numberOfElements) &&
         Objects.equals(this.pageable, pageBatchDto.pageable) &&
         Objects.equals(this.empty, pageBatchDto.empty);
@@ -293,7 +293,7 @@ public class PageBatchDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalElements, totalPages, size, content, number, first, last, sort, numberOfElements, pageable, empty);
+    return Objects.hash(totalElements, totalPages, size, content, number, sort, first, last, numberOfElements, pageable, empty);
   }
 
 
@@ -307,9 +307,9 @@ public class PageBatchDto {
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");
+    sb.append("    sort: ").append(toIndentedString(sort)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");
     sb.append("    last: ").append(toIndentedString(last)).append("\n");
-    sb.append("    sort: ").append(toIndentedString(sort)).append("\n");
     sb.append("    numberOfElements: ").append(toIndentedString(numberOfElements)).append("\n");
     sb.append("    pageable: ").append(toIndentedString(pageable)).append("\n");
     sb.append("    empty: ").append(toIndentedString(empty)).append("\n");

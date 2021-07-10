@@ -2,6 +2,7 @@ package io.swagger.client.api;
 
 import io.swagger.client.ApiClient;
 
+import io.swagger.client.model.JobStateDto;
 import io.swagger.client.model.PageLogBatchDto;
 import io.swagger.client.model.Pageable;
 import io.swagger.client.model.Predicate;
@@ -25,7 +26,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-04T22:32:11.845Z[GMT]")@Component("io.swagger.client.api.LogApi")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-10T21:22:29.539Z[GMT]")@Component("io.swagger.client.api.LogApi")
 public class LogApi {
     private ApiClient apiClient;
 
@@ -183,6 +184,41 @@ public class LogApi {
         String[] authNames = new String[] { "ebad-api-key", "jwt" };
 
         ParameterizedTypeReference<PageLogBatchDto> returnType = new ParameterizedTypeReference<PageLogBatchDto>() {};
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    }
+    /**
+     * 
+     * 
+     * <p><b>200</b> - OK
+     * @param jobId The jobId parameter
+     * @return JobStateDto
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public JobStateDto getLogFromJobId(String jobId) throws RestClientException {
+        Object postBody = null;
+        // verify the required parameter 'jobId' is set
+        if (jobId == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'jobId' when calling getLogFromJobId");
+        }
+        // create path and map variables
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        uriVariables.put("jobId", jobId);
+        String path = UriComponentsBuilder.fromPath("/logs/job/{jobId}").buildAndExpand(uriVariables).toUriString();
+        
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] accepts = { 
+            "application/json"
+         };
+        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
+        final String[] contentTypes = {  };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "ebad-api-key", "jwt" };
+
+        ParameterizedTypeReference<JobStateDto> returnType = new ParameterizedTypeReference<JobStateDto>() {};
         return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     }
 }

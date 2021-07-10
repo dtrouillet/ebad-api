@@ -17,17 +17,17 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.client.model.Directory;
+import io.swagger.client.model.DirectoryDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.joda.time.DateTime;
 /**
  * FilesDto
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-04T22:32:11.845Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-10T21:22:29.539Z[GMT]")
 public class FilesDto {
   @JsonProperty("directory")
-  private Directory directory = null;
+  private DirectoryDto directory = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -47,7 +47,7 @@ public class FilesDto {
   @JsonProperty("folder")
   private Boolean folder = null;
 
-  public FilesDto directory(Directory directory) {
+  public FilesDto directory(DirectoryDto directory) {
     this.directory = directory;
     return this;
   }
@@ -57,11 +57,11 @@ public class FilesDto {
    * @return directory
   **/
   @Schema(description = "")
-  public Directory getDirectory() {
+  public DirectoryDto getDirectory() {
     return directory;
   }
 
-  public void setDirectory(Directory directory) {
+  public void setDirectory(DirectoryDto directory) {
     this.directory = directory;
   }
 

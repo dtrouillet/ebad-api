@@ -12,10 +12,10 @@
 
 package io.swagger.client.api;
 
+import org.joda.time.DateTime;
 import io.swagger.client.model.EnvironnementCreationDto;
 import io.swagger.client.model.EnvironnementDto;
 import io.swagger.client.model.EnvironnementInfoDTO;
-import org.threeten.bp.OffsetDateTime;
 import io.swagger.client.model.PageEnvironnementDto;
 import io.swagger.client.model.Pageable;
 import io.swagger.client.model.Predicate;
@@ -61,7 +61,7 @@ public class EnvironmentApiTest {
     @Test
     public void changeDateTraitementTest() {
         Long env = null;
-        OffsetDateTime dateTraitement = null;
+        DateTime dateTraitement = null;
         String response = api.changeDateTraitement(env, dateTraitement);
 
         // TODO: test validations

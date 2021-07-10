@@ -25,10 +25,13 @@ import org.joda.time.DateTime;
  * LogBatchDto
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-04T22:32:11.845Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-10T21:22:29.539Z[GMT]")
 public class LogBatchDto {
   @JsonProperty("id")
   private Long id = null;
+
+  @JsonProperty("jobId")
+  private String jobId = null;
 
   @JsonProperty("batch")
   private BatchLogDto batch = null;
@@ -70,6 +73,24 @@ public class LogBatchDto {
 
   public void setId(Long id) {
     this.id = id;
+  }
+
+  public LogBatchDto jobId(String jobId) {
+    this.jobId = jobId;
+    return this;
+  }
+
+   /**
+   * Get jobId
+   * @return jobId
+  **/
+  @Schema(description = "")
+  public String getJobId() {
+    return jobId;
+  }
+
+  public void setJobId(String jobId) {
+    this.jobId = jobId;
   }
 
   public LogBatchDto batch(BatchLogDto batch) {
@@ -227,6 +248,7 @@ public class LogBatchDto {
     }
     LogBatchDto logBatchDto = (LogBatchDto) o;
     return Objects.equals(this.id, logBatchDto.id) &&
+        Objects.equals(this.jobId, logBatchDto.jobId) &&
         Objects.equals(this.batch, logBatchDto.batch) &&
         Objects.equals(this.environnement, logBatchDto.environnement) &&
         Objects.equals(this.logDate, logBatchDto.logDate) &&
@@ -239,7 +261,7 @@ public class LogBatchDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, batch, environnement, logDate, executionTime, returnCode, params, dateTraitement, login);
+    return Objects.hash(id, jobId, batch, environnement, logDate, executionTime, returnCode, params, dateTraitement, login);
   }
 
 
@@ -249,6 +271,7 @@ public class LogBatchDto {
     sb.append("class LogBatchDto {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    jobId: ").append(toIndentedString(jobId)).append("\n");
     sb.append("    batch: ").append(toIndentedString(batch)).append("\n");
     sb.append("    environnement: ").append(toIndentedString(environnement)).append("\n");
     sb.append("    logDate: ").append(toIndentedString(logDate)).append("\n");

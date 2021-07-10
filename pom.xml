@@ -6,12 +6,12 @@
   <packaging>jar</packaging>
   <name>ebad-java-client</name>
   <version>2.7.0</version>
-  <url>https://github.com/informatique-cdc/ebad-api</url>
-  <description>Ebad API Client Java</description>
+  <url>https://github.com/swagger-api/swagger-codegen</url>
+  <description>Swagger Java</description>
   <scm>
-    <connection>scm:git:git@github.com:informatique-cdc/ebad-api.git</connection>
-    <developerConnection>scm:git:git@github.com:informatique-cdc/ebad-api.git</developerConnection>
-    <url>https://github.com/informatique-cdc/ebad-api</url>
+    <connection>scm:git:git@github.com:swagger-api/swagger-codegen.git</connection>
+    <developerConnection>scm:git:git@github.com:swagger-api/swagger-codegen.git</developerConnection>
+    <url>https://github.com/swagger-api/swagger-codegen</url>
   </scm>
   <prerequisites>
     <maven>2.2.0</maven>
@@ -19,17 +19,18 @@
 
   <licenses>
     <license>
-      <name>Apache-2.0</name>
-      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <name>Unlicense</name>
+      <url>http://unlicense.org</url>
+      <distribution>repo</distribution>
     </license>
   </licenses>
 
   <developers>
     <developer>
-      <name>dtrouillet</name>
-      <email>contat@damien-trouillet.fr</email>
-      <organization>Informatique CDC</organization>
-      <organizationUrl>https://www.icdc.caissedesdepots.fr/</organizationUrl>
+      <name>Swagger</name>
+      <email>apiteam@swagger.io</email>
+      <organization>Swagger</organization>
+      <organizationUrl>http://swagger.io</organizationUrl>
     </developer>
   </developers>
 
@@ -123,19 +124,6 @@
           <target>1.7</target>
         </configuration>
       </plugin>
-<!--      <plugin>-->
-<!--        <groupId>org.apache.maven.plugins</groupId>-->
-<!--        <artifactId>maven-javadoc-plugin</artifactId>-->
-<!--        <version>2.10.4</version>-->
-<!--        <executions>-->
-<!--          <execution>-->
-<!--            <id>attach-javadocs</id>-->
-<!--            <goals>-->
-<!--              <goal>jar</goal>-->
-<!--            </goals>-->
-<!--          </execution>-->
-<!--        </executions>-->
-<!--      </plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
@@ -183,11 +171,6 @@
       <version>1.3.2</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpclient</artifactId>
-      <version>4.4.1</version>
-    </dependency>
-    <dependency>
       <groupId>io.swagger.core.v3</groupId>
       <artifactId>swagger-annotations</artifactId>
       <version>${swagger-annotations-version}</version>
@@ -199,7 +182,7 @@
       <artifactId>spring-web</artifactId>
       <version>${spring-web-version}</version>
     </dependency>
-
+    
     <!-- JSON processing: jackson -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
@@ -223,13 +206,13 @@
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.datatype</groupId>
-      <artifactId>jackson-datatype-jsr310</artifactId>
+      <artifactId>jackson-datatype-joda</artifactId>
       <version>${jackson-version}</version>
     </dependency>
     <dependency>
-      <groupId>com.fasterxml.jackson.datatype</groupId>
-      <artifactId>jackson-datatype-joda</artifactId>
-      <version>${jackson-version}</version>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>${jodatime-version}</version>
     </dependency>
 
     <!-- test dependencies -->
@@ -245,6 +228,7 @@
     <swagger-annotations-version>2.0.0</swagger-annotations-version>
     <spring-web-version>4.3.9.RELEASE</spring-web-version>
     <jackson-version>2.8.9</jackson-version>
+    <jodatime-version>2.9.9</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <junit-version>4.13.1</junit-version>
   </properties>

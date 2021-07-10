@@ -72,7 +72,7 @@ No authorization required
 
 EnvironmentApi apiInstance = new EnvironmentApi();
 Long env = 789L; // Long | 
-OffsetDateTime dateTraitement = new OffsetDateTime(); // OffsetDateTime | 
+DateTime dateTraitement = new DateTime(); // DateTime | 
 try {
     String result = apiInstance.changeDateTraitement(env, dateTraitement);
     System.out.println(result);
@@ -87,7 +87,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **env** | **Long**|  |
- **dateTraitement** | **OffsetDateTime**|  |
+ **dateTraitement** | **DateTime**|  |
 
 ### Return type
 
