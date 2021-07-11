@@ -27,13 +27,13 @@ import java.util.List;
  * PageNormLabelIdDto
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-10T21:22:29.539Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-11T21:08:45.148Z[GMT]")
 public class PageNormLabelIdDto {
-  @JsonProperty("totalElements")
-  private Long totalElements = null;
-
   @JsonProperty("totalPages")
   private Integer totalPages = null;
+
+  @JsonProperty("totalElements")
+  private Long totalElements = null;
 
   @JsonProperty("size")
   private Integer size = null;
@@ -62,24 +62,6 @@ public class PageNormLabelIdDto {
   @JsonProperty("empty")
   private Boolean empty = null;
 
-  public PageNormLabelIdDto totalElements(Long totalElements) {
-    this.totalElements = totalElements;
-    return this;
-  }
-
-   /**
-   * Get totalElements
-   * @return totalElements
-  **/
-  @Schema(description = "")
-  public Long getTotalElements() {
-    return totalElements;
-  }
-
-  public void setTotalElements(Long totalElements) {
-    this.totalElements = totalElements;
-  }
-
   public PageNormLabelIdDto totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
@@ -96,6 +78,24 @@ public class PageNormLabelIdDto {
 
   public void setTotalPages(Integer totalPages) {
     this.totalPages = totalPages;
+  }
+
+  public PageNormLabelIdDto totalElements(Long totalElements) {
+    this.totalElements = totalElements;
+    return this;
+  }
+
+   /**
+   * Get totalElements
+   * @return totalElements
+  **/
+  @Schema(description = "")
+  public Long getTotalElements() {
+    return totalElements;
+  }
+
+  public void setTotalElements(Long totalElements) {
+    this.totalElements = totalElements;
   }
 
   public PageNormLabelIdDto size(Integer size) {
@@ -278,8 +278,8 @@ public class PageNormLabelIdDto {
       return false;
     }
     PageNormLabelIdDto pageNormLabelIdDto = (PageNormLabelIdDto) o;
-    return Objects.equals(this.totalElements, pageNormLabelIdDto.totalElements) &&
-        Objects.equals(this.totalPages, pageNormLabelIdDto.totalPages) &&
+    return Objects.equals(this.totalPages, pageNormLabelIdDto.totalPages) &&
+        Objects.equals(this.totalElements, pageNormLabelIdDto.totalElements) &&
         Objects.equals(this.size, pageNormLabelIdDto.size) &&
         Objects.equals(this.content, pageNormLabelIdDto.content) &&
         Objects.equals(this.number, pageNormLabelIdDto.number) &&
@@ -293,7 +293,7 @@ public class PageNormLabelIdDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalElements, totalPages, size, content, number, sort, first, last, numberOfElements, pageable, empty);
+    return Objects.hash(totalPages, totalElements, size, content, number, sort, first, last, numberOfElements, pageable, empty);
   }
 
 
@@ -302,8 +302,8 @@ public class PageNormLabelIdDto {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageNormLabelIdDto {\n");
     
-    sb.append("    totalElements: ").append(toIndentedString(totalElements)).append("\n");
     sb.append("    totalPages: ").append(toIndentedString(totalPages)).append("\n");
+    sb.append("    totalElements: ").append(toIndentedString(totalElements)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");

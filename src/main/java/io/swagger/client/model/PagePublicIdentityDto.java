@@ -27,13 +27,13 @@ import java.util.List;
  * PagePublicIdentityDto
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-10T21:22:29.539Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-11T21:08:45.148Z[GMT]")
 public class PagePublicIdentityDto {
-  @JsonProperty("totalElements")
-  private Long totalElements = null;
-
   @JsonProperty("totalPages")
   private Integer totalPages = null;
+
+  @JsonProperty("totalElements")
+  private Long totalElements = null;
 
   @JsonProperty("size")
   private Integer size = null;
@@ -62,24 +62,6 @@ public class PagePublicIdentityDto {
   @JsonProperty("empty")
   private Boolean empty = null;
 
-  public PagePublicIdentityDto totalElements(Long totalElements) {
-    this.totalElements = totalElements;
-    return this;
-  }
-
-   /**
-   * Get totalElements
-   * @return totalElements
-  **/
-  @Schema(description = "")
-  public Long getTotalElements() {
-    return totalElements;
-  }
-
-  public void setTotalElements(Long totalElements) {
-    this.totalElements = totalElements;
-  }
-
   public PagePublicIdentityDto totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
@@ -96,6 +78,24 @@ public class PagePublicIdentityDto {
 
   public void setTotalPages(Integer totalPages) {
     this.totalPages = totalPages;
+  }
+
+  public PagePublicIdentityDto totalElements(Long totalElements) {
+    this.totalElements = totalElements;
+    return this;
+  }
+
+   /**
+   * Get totalElements
+   * @return totalElements
+  **/
+  @Schema(description = "")
+  public Long getTotalElements() {
+    return totalElements;
+  }
+
+  public void setTotalElements(Long totalElements) {
+    this.totalElements = totalElements;
   }
 
   public PagePublicIdentityDto size(Integer size) {
@@ -278,8 +278,8 @@ public class PagePublicIdentityDto {
       return false;
     }
     PagePublicIdentityDto pagePublicIdentityDto = (PagePublicIdentityDto) o;
-    return Objects.equals(this.totalElements, pagePublicIdentityDto.totalElements) &&
-        Objects.equals(this.totalPages, pagePublicIdentityDto.totalPages) &&
+    return Objects.equals(this.totalPages, pagePublicIdentityDto.totalPages) &&
+        Objects.equals(this.totalElements, pagePublicIdentityDto.totalElements) &&
         Objects.equals(this.size, pagePublicIdentityDto.size) &&
         Objects.equals(this.content, pagePublicIdentityDto.content) &&
         Objects.equals(this.number, pagePublicIdentityDto.number) &&
@@ -293,7 +293,7 @@ public class PagePublicIdentityDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalElements, totalPages, size, content, number, sort, first, last, numberOfElements, pageable, empty);
+    return Objects.hash(totalPages, totalElements, size, content, number, sort, first, last, numberOfElements, pageable, empty);
   }
 
 
@@ -302,8 +302,8 @@ public class PagePublicIdentityDto {
     StringBuilder sb = new StringBuilder();
     sb.append("class PagePublicIdentityDto {\n");
     
-    sb.append("    totalElements: ").append(toIndentedString(totalElements)).append("\n");
     sb.append("    totalPages: ").append(toIndentedString(totalPages)).append("\n");
+    sb.append("    totalElements: ").append(toIndentedString(totalElements)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");

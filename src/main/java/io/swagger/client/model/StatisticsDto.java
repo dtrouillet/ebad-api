@@ -25,7 +25,7 @@ import java.util.List;
  * StatisticsDto
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-10T21:22:29.539Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-11T21:08:45.148Z[GMT]")
 public class StatisticsDto {
   @JsonProperty("usersNbr")
   private Long usersNbr = null;

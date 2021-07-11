@@ -27,13 +27,13 @@ import java.util.List;
  * PageDirectoryDto
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-10T21:22:29.539Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-07-11T21:08:45.148Z[GMT]")
 public class PageDirectoryDto {
-  @JsonProperty("totalElements")
-  private Long totalElements = null;
-
   @JsonProperty("totalPages")
   private Integer totalPages = null;
+
+  @JsonProperty("totalElements")
+  private Long totalElements = null;
 
   @JsonProperty("size")
   private Integer size = null;
@@ -62,24 +62,6 @@ public class PageDirectoryDto {
   @JsonProperty("empty")
   private Boolean empty = null;
 
-  public PageDirectoryDto totalElements(Long totalElements) {
-    this.totalElements = totalElements;
-    return this;
-  }
-
-   /**
-   * Get totalElements
-   * @return totalElements
-  **/
-  @Schema(description = "")
-  public Long getTotalElements() {
-    return totalElements;
-  }
-
-  public void setTotalElements(Long totalElements) {
-    this.totalElements = totalElements;
-  }
-
   public PageDirectoryDto totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
@@ -96,6 +78,24 @@ public class PageDirectoryDto {
 
   public void setTotalPages(Integer totalPages) {
     this.totalPages = totalPages;
+  }
+
+  public PageDirectoryDto totalElements(Long totalElements) {
+    this.totalElements = totalElements;
+    return this;
+  }
+
+   /**
+   * Get totalElements
+   * @return totalElements
+  **/
+  @Schema(description = "")
+  public Long getTotalElements() {
+    return totalElements;
+  }
+
+  public void setTotalElements(Long totalElements) {
+    this.totalElements = totalElements;
   }
 
   public PageDirectoryDto size(Integer size) {
@@ -278,8 +278,8 @@ public class PageDirectoryDto {
       return false;
     }
     PageDirectoryDto pageDirectoryDto = (PageDirectoryDto) o;
-    return Objects.equals(this.totalElements, pageDirectoryDto.totalElements) &&
-        Objects.equals(this.totalPages, pageDirectoryDto.totalPages) &&
+    return Objects.equals(this.totalPages, pageDirectoryDto.totalPages) &&
+        Objects.equals(this.totalElements, pageDirectoryDto.totalElements) &&
         Objects.equals(this.size, pageDirectoryDto.size) &&
         Objects.equals(this.content, pageDirectoryDto.content) &&
         Objects.equals(this.number, pageDirectoryDto.number) &&
@@ -293,7 +293,7 @@ public class PageDirectoryDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalElements, totalPages, size, content, number, sort, first, last, numberOfElements, pageable, empty);
+    return Objects.hash(totalPages, totalElements, size, content, number, sort, first, last, numberOfElements, pageable, empty);
   }
 
 
@@ -302,8 +302,8 @@ public class PageDirectoryDto {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageDirectoryDto {\n");
     
-    sb.append("    totalElements: ").append(toIndentedString(totalElements)).append("\n");
     sb.append("    totalPages: ").append(toIndentedString(totalPages)).append("\n");
+    sb.append("    totalElements: ").append(toIndentedString(totalElements)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");
